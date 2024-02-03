@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if spiral_plot_image.image %}
+    <img src="{{ spiral_plot_image.image.url }}" alt="Spiral Plot">
+{% else %}
+    <p></p>
+{% endif %}
+        {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+{% endblock %}
